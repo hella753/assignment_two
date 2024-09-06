@@ -1,11 +1,14 @@
+import os
+import sys
+
 from PyQt5.QtWidgets import QWidget, QLineEdit, QLabel, QComboBox, QPushButton
 from PyQt5 import uic
 
 class App(QWidget):
     def __init__(self, main_window):
         super().__init__()
-        uic.loadUi('../ui/loaduiapp.ui', self) # აპის ui ვაიმპორტებთ
         self.main_window = main_window
+        uic.loadUi(self.resource_path('ui/loaduiapp.ui'), self) # აპის ui ვაიმპორტებთ
         self.from_value_input = self.findChild(QLineEdit, 'from_value_input') # ელემენტების ინიციალიზაცია
         self.result_label = self.findChild(QLabel, 'result_label')
         self.from_curr_combobox = self.findChild(QComboBox, 'from_curr_combobox')
@@ -52,4 +55,14 @@ class App(QWidget):
         # დაბრუნება ავტორიზაციის გვერდზე
         self.main_window.switch_to_login()
         self.clear_button_clicked()
+
+    @staticmethod
+    def resource_path(relative_path):
+        try:
+            base_path = sys._MEIPASS
+        except AttributeError:
+            base_path = os.path.abspath(".")
+        return os.path.join(base_path, relative_path)
+
+
 
