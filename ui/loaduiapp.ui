@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: &quot;#7C93C3&quot;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <item row="2" column="0" alignment="Qt::AlignRight">
+      <widget class="QLineEdit" name="from_value_input">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#E1D7B7&quot;;
+border: &quot;0px solid #E1D7B7&quot;;
+color: &quot;#1E2A5E&quot;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+      <widget class="QComboBox" name="from_curr_combobox">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#E1D7B7&quot;;
+color: &quot;#1E2A5E&quot;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>USD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GEL</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EUR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GBP</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="1" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+      <widget class="QComboBox" name="to_curr_combobox">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#E1D7B7&quot;;
+color: &quot;#1E2A5E&quot;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>USD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GEL</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EUR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GBP</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="logout_button">
+       <property name="font">
+        <font>
+         <family>Tbilisi</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#1E2A5E&quot;;
+color: &quot;#E1D7B7&quot;;</string>
+       </property>
+       <property name="text">
+        <string>გამოსვლა</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QPushButton" name="clear_button">
+       <property name="font">
+        <font>
+         <family>Tbilisi</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#55679C&quot;;
+color: &quot;#E1D7B7&quot;;</string>
+       </property>
+       <property name="text">
+        <string>გასუფთავება</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QPushButton" name="convert_button">
+       <property name="font">
+        <font>
+         <family>Tbilisi</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: &quot;#55679C&quot;;
+color: &quot;#E1D7B7&quot;;</string>
+       </property>
+       <property name="text">
+        <string>კონვერტაცია</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="convert_label">
+       <property name="font">
+        <font>
+         <family>Tbilisi</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#1E2A5E&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ვალუტის კონვერტაცია</string>
+       </property>
+       <property name="wordWrap">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" alignment="Qt::AlignRight|Qt::AlignVCenter">
+      <widget class="QLabel" name="result_label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#1E2A5E&quot;;</string>
+       </property>
+       <property name="text">
+        <string>შედეგი</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
