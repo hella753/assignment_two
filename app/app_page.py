@@ -1,4 +1,4 @@
-import os
+import os.path
 import sys
 
 from PyQt5.QtWidgets import QWidget, QLineEdit, QLabel, QComboBox, QPushButton

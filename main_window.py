@@ -1,4 +1,4 @@
-import os
+import os.path
 
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget
