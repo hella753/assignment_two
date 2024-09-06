@@ -25,6 +25,9 @@ class MainWindow(QMainWindow):
     def switch_to_login(self):
         self.stacked_widget.setCurrentWidget(self.login_page)
 
+
+    # ეს pyinstaller-ისთვის იყო საჭირო. gpt-მ მიკარნახა რადგან არ აღიქვამდა რელაციურ და აბსოლუტურ path-ებს და ვერ აკეთებდა
+    # სწორ .exe fileს
     @staticmethod
     def resource_path(relative_path):
         try:
