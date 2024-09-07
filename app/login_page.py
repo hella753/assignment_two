@@ -8,7 +8,7 @@ class LoginPage(QWidget):
     def __init__(self, main_window):
         super().__init__()
         self.main_window = main_window
-        uic.loadUi(self.resource_path('ui/loaduiauth.ui'), self) # ავტორიზაციის ui-ს ვტვირთავთ
+        uic.loadUi(self.main_window.resource_path('ui/loaduiauth.ui'), self) # ავტორიზაციის ui-ს ვტვირთავთ
         self.user = "admin" # ეს იქნება იუზერი და პაროლი
         self.password = "admin"
         self.user_input = self.findChild(QLineEdit, 'user_input') # ელემენტების ინიციალიზაცია
@@ -44,13 +44,4 @@ class LoginPage(QWidget):
         msg_box.setWindowTitle("შეცდომა")
         msg_box.setStandardButtons(QMessageBox.Ok)
         msg_box.exec_()
-
-    @staticmethod
-    def resource_path(relative_path):
-        try:
-            base_path = sys._MEIPASS
-        except AttributeError:
-            base_path = os.path.abspath(".")
-        return os.path.join(base_path, relative_path)
-
 
