@@ -1,6 +1,3 @@
-import os
-import sys
-
 from PyQt5.QtWidgets import QWidget, QLineEdit, QPushButton, QMessageBox
 from PyQt5 import uic
 
